@@ -17,7 +17,7 @@ export const accessTokenOptions = {
     maxAge: accessTokenExpire,
     httpOnly: true,
     sameSite: "Lax",
-    secure: false,
+    secure: true,
 };
 
 // Refresh token cookie options
@@ -26,7 +26,7 @@ export const refreshTokenOptions = {
     maxAge: refreshTokenExpire,
     httpOnly: true,
     sameSite: "Lax",
-    secure: false,
+    secure: true,
 };
 export const SignAccessToken = (id) => jwt.sign({ id: id }, ACCESS_TOKEN_SECRET || "", { expiresIn: "5m" });
 export const SignRefreshToken = (id) => jwt.sign({ id: id }, REFRESH_TOKEN_SECRET || "", { expiresIn: "3d" });
