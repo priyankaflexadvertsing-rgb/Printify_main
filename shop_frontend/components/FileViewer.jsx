@@ -58,7 +58,7 @@ export const FileViewer = ({ files, name }) => {
     <div className=" overflow-auto ml-[11rem] p-2">
       <div className="flex flex-wrap gap-2 items-center justify-center">
         {files.map((file, i) => {
-          const fileUrl = `http://localhost:8000/thumbnails/${encodeURIComponent(file)}`;
+          const fileUrl = `https://printify-main.onrender.com/thumbnails/${encodeURIComponent(file)}`;
           const isSelected = selectedFiles.includes(file);
 
           return (
@@ -88,3 +88,4 @@ export const FileViewer = ({ files, name }) => {
     </div>
   );
 };
+
